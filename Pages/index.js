@@ -44,4 +44,3 @@ addNameForm.addEventListener('submit', function (event) {
   // Redirect to cards page
   window.location.href = 'cards.html';
 });
-
