@@ -9,14 +9,26 @@
   </head>
   <body class="page">
     <header class="header">
-      <div class="header__logo">Discover art</div>
+      <div class="header__logo-container">
+        <img class="header__logo" src="./images/logo.png" alt="logo" />
+        <h1 class="header__title">Masterpiece Matchup</h1>
+      </div>
     </header>
     <main class="main">
       <div class="player">
         <p class="player__info" id="player-name"></p>
-        <p class="player__info" id="player-round"></p>
-        <p class="player__info" id="player-score"></p>
+        <p class="player__info" id="player-round">Do you know...</p>
+        <p class="player__info" id="player-score">Your art history ?</p>
       </div>
+
+      <!--timer----------->
+      <div class="countdown-timer-container">
+        <div id="countdown-timer" style="display: none">
+          <span id="countname">Timer:</span>
+          <div class="countdown-container"><span id="countdown">30</span></div>
+        </div>
+      </div>
+
       <h2 class="title">Try to remember the artists</h2>
       <section class="gallery">
         <template id="card-template">
@@ -27,15 +39,32 @@
             <p class="card__author">monet</p>
           </div>
         </template>
-        <!-- <div class="card">
-              <div class="card__image-container">
-                <img class="card__image" src="./images/test-image.png" alt="#" />
-              </div>
-              <p class="card__author">monet</p>
-            </div> -->
       </section>
     </main>
-    <a href="game.html">Link</a>
+
+    <footer class="footer">
+      <p class="footer__info">Masterpiece Matchup</p>
+      <ul class="footer__names">
+        <li>Setayesh Nouri</li>
+        <li>Heidi Espiritu</li>
+        <li>Milla Linden</li>
+        <li>Kseniia Tikhonova</li>
+        <li>Niklas Wallenborg</li>
+      </ul>
+      <a class="footer__api-link" href="https://www.artic.edu/" target="_blank"
+        >Credits to: The Art Institute of Chicago</a
+      >
+      <div class="footer__triangle rotation"></div>
+    </footer>
+
+    <!---loader wrapper---->
+    <div id="loading-wrapper">
+      <div id="loading-text">Fetching art..</div>
+      <div id="loading-content"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!--JQUERY library link needed------->
     <script src="./pages/cards.js"></script>
   </body>
 </html>
