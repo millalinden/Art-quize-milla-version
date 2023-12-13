@@ -10,7 +10,7 @@ let artworksArray = Object.values(retrievedArray);
 let roundEl = document.querySelector('.title__artist');
 let playerScore = document.querySelector('#player-score');
 let playerRound = document.querySelector('#player-round');
-let canClickNewAnswer = true; //----- variable declaration for canClickNewAnswer -heidi
+let canClickNewAnswer = true; //----- variable declaration for canClickNewAnswer 
 
 // Info popup
 const startButton = document.querySelector('#button-start');
@@ -66,7 +66,7 @@ function showFeedback(isCorrect) {
 
   setTimeout(() => {
     feedbackMessage.textContent = '';
-  }, 2000); //----shows the answer feed back for 2 seconds -heidi
+  }, 2000); //----shows the answer feed back for 2 seconds
 }
 
 function renderRound(round) {
@@ -86,19 +86,19 @@ function renderRound(round) {
 
     artworkEl.addEventListener('click', function () {
       if (canClickNewAnswer) {
-        canClickNewAnswer = false; //-----added condtion where player cannot click for a new answer after 2 seconds (adds delay to answer in the new round)----Heidi
+        canClickNewAnswer = false; //-----added condtion where player cannot click for a new answer after 2 seconds (adds delay to answer in the new round)
         if (i === correctAnswerIndex) {
           score += 1;
-          showFeedback(true); //------shows feedback if its correct -heidi
+          showFeedback(true); //------shows feedback if its correct 
         } else {
-          showFeedback(false); //------shows feedback if its wrong -heidi
+          showFeedback(false); //------shows feedback if its wrong 
         }
 
         playerScore.textContent = `Score: ${score}`;
         playerRound.textContent = `Round: ${currentRound + 2}`;
 
         setTimeout(() => {
-          //---------- added a condition where player can now click after 2 seconds same as the feedback time. line 105-108 -Heidi
+          //---------- added a condition where player can now click after 2 seconds same as the feedback time. line 105-108
           canClickNewAnswer = true;
         }, 2000);
 
@@ -108,7 +108,7 @@ function renderRound(round) {
           currentRound += 1;
           renderRound(getCards()[currentRound]);
         }
-        window.scrollTo(0, 0); //-----automatically scrolss up the screen -heidi
+        window.scrollTo(0, 0); //-----automatically scrolss up the screen 
       }
     });
   });
